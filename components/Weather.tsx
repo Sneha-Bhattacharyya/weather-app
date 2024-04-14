@@ -14,7 +14,15 @@ const Weather = ({ data, city }:{data:IWeatherData, city:string}) => {
         <ErrorPage statusCode={404} />
       </div>
     );
-  } else {
+  }
+  else if(data.main.temp === 0) {
+    return (
+      <div>
+        <ErrorPage statusCode={500} />
+      </div>
+    );
+  }
+   else {
     return (
       <div className="relative flex flex-col justify-between max-w-[500] w-full m-auto text-white z-[10]">
         <div className="relative flex justify-between pt-12">
@@ -22,14 +30,14 @@ const Weather = ({ data, city }:{data:IWeatherData, city:string}) => {
             <Icons data={data} />
             <p className="text-2xl">{data.weather[0].main}</p>
           </div>
-          <p className="text-9xl">{data.main.temp - 273}&#176;C</p>
+          <p className="text-9xl">{(data.main.temp - 273).toFixed(0)}&#176;C</p>
         </div>
         <div className="bg-gray-500/30 relative p-8 rounded-md">
           <p className="text-2xl text-center pb-6">Weather in {data.name}</p>
           <div className="flex justify-between text-center">
             <div>
               <p className="font-bold text-2xl">
-                {data.main.feels_like - 273}&#176;C
+                {(data.main.feels_like - 273).toFixed(0)}&#176;C
               </p>
               <p className="text-xl">Feels Like</p>
             </div>
