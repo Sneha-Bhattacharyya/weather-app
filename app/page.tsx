@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import Weather from "../components/Weather";
 import { IWeatherData } from "@/types";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   const [city, setCity] = useState("");
@@ -52,6 +53,7 @@ export default function Home() {
 
   const [loading, setLoading] = useState(false)
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=standard&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`;
+
   const fetchWeather = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -62,6 +64,7 @@ export default function Home() {
     setLoading(false);
   };
   // console.log(city);
+  if(loading) return <Loader /> 
 
   return (
     <div className="bg-gradient-to-bl from-[#2df1fe] to-[#094672] ">

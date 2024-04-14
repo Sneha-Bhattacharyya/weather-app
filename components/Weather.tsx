@@ -11,14 +11,14 @@ const Weather = ({ data, city }:{data:IWeatherData, city:string}) => {
   ) {
     return (
       <div>
-        <ErrorPage statusCode={404} />
+        <ErrorPage statusCode={404} title="City Not Found" />
       </div>
     );
   }
   else if(data.main.temp === 0) {
     return (
       <div>
-        <ErrorPage statusCode={500} />
+        <ErrorPage statusCode={500} title="No City Provided" />
       </div>
     );
   }

@@ -13,7 +13,7 @@ import {
   WiSnowflakeCold,
   WiThunderstorm,
 } from "react-icons/wi";
-const Icons = ({ data }:{data: IWeatherData}) => {
+const Icons = ({ data }: { data: IWeatherData }) => {
   if (data.weather[0].id >= 200 && data.weather[0].id <= 232) {
     return (
       <div>
