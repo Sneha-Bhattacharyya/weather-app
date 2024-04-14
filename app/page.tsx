@@ -61,6 +61,7 @@ export default function Home() {
     setCity("");
     setLoading(false);
   };
+  // console.log(city);
 
   return (
     <div className="bg-gradient-to-bl from-[#2df1fe] to-[#094672] ">
