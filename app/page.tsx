@@ -23,11 +23,11 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gradient-to-bl from-[#2df1fe] to-[#094672] ">
       <main className="h-screen px-10 md:px-20">
         <section className="min-h-max">
           <nav className=" py-3.5 mb-4 flex justify-between sm:py-5">
-            <h1 className=" text-xl text-white">Titai</h1>
+            <h1 className=" text-2xl font-bold text-[#090670] ">Titai</h1>
             <ul className=" flex items-center">
               <li>
                 <BsFillMoonStarsFill className=" cursor-pointer text-2xl text-white" />
@@ -35,19 +35,19 @@ export default function Home() {
             </ul>
           </nav>
           <div className=" text-center p-5">
-            <h2 className="font-burtons text-3xl py-2 text-teal-500 font-medium md:text-6xl">
-              WeatherForecasting App
+            <h2 className=" text-3xl text-[#02232e] py-2  font-medium md:text-6xl">
+              Weather-Forecasting App
             </h2>
           </div>
-          <div className="relative flex justify-center items-center max-w-[800px] w-full m-auto pt-4 px-4 text-teal-500">
+          <div className="relative flex justify-center items-center max-w-[800px] w-full m-auto pt-4 px-4 text-[#02232e]">
             <form
               onSubmit={fetchWeather}
-              className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-teal-500 text-teal-500 rounded-2xl"
+              className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-[#02232e] text-[#02232e] rounded-3xl"
             >
               <div>
                 <input
                   onChange={(e) => setCity(e.target.value)}
-                  className="bg-transparent border-none text-teal-500 focus:outline-none text-2xl"
+                  className="bg-transparent border-none text-[#02232e] focus:outline-none text-2xl"
                   type="text"
                   placeholder="Search city"
                 />
