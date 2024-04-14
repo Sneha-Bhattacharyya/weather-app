@@ -16,7 +16,7 @@ const Weather = ({ data, city }:{data:IWeatherData, city:string}) => {
     );
   } else {
     return (
-      <div className="font-burtons relative flex flex-col justify-between max-w-[500] w-full m-auto text-white z-[10]">
+      <div className="relative flex flex-col justify-between max-w-[500] w-full m-auto text-white z-[10]">
         <div className="relative flex justify-between pt-12">
           <div className="flex flex-col items-center">
             <Icons data={data} />
