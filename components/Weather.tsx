@@ -2,7 +2,7 @@ import React from "react";
 import Icons from "./Icons";
 import ErrorPage from "next/error";
 const Weather = ({ data, city }) => {
-  console.log(data);
+  // console.log(data);
   if (
     data.name != "" &&
     city != "" &&
@@ -15,7 +15,7 @@ const Weather = ({ data, city }) => {
     );
   } else {
     return (
-      <div className="font-burtons relative flex flex-col justify-between max-w-[500] w-full m-auto text-white z-[10]">
+      <div className=" relative flex flex-col justify-between max-w-[500] w-full m-auto text-white z-[10]">
         <div className="relative flex justify-between pt-12">
           <div className="flex flex-col items-center">
             <Icons data={data} />
